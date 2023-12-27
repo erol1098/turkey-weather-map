@@ -2,7 +2,7 @@
 
 const Map = () => {
   return (
-    <div className=''>
+    <div className='w-full h-svh lg:w-3/4 mx-auto bg-slate-400 dark:bg-slate-600'>
       <svg
         id='svg-turkey-map'
         xmlns='http://www.w3.org/2000/svg'

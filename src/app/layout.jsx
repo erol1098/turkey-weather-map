@@ -1,5 +1,7 @@
 import { Inter } from 'next/font/google';
+
 import './globals.css';
+import { Header, ThemeProvider } from '@/components';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -11,7 +13,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='en'>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <ThemeProvider
+          attribute='class'
+          defaultTheme='system'
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className='bg-slate-400 dark:bg-slate-600'>{children}</main>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
