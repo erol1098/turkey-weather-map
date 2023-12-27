@@ -1,9 +1,14 @@
 {
   "name": "turkey-weather-map",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
+  "author": {
+    "name": "Erol Mahmutoğlu",
+    "email": "erol1098@gmail.com",
+    "url": "https://github.com/erol1098"
+  },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
