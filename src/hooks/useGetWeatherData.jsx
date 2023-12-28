@@ -11,7 +11,7 @@ const useGetWeatherData = () => {
       const data = await response.json();
       return data;
     } catch (error) {
-      console.log(error);
+      throw new Error(error);
     }
   };
 
@@ -28,7 +28,7 @@ const useGetWeatherData = () => {
       data.cityName = res[0].name;
       return data;
     } catch (error) {
-      console.log(error);
+      throw new Error(error);
     } finally {
       setLoading(false);
     }

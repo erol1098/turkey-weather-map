@@ -6,8 +6,8 @@ import { Header, ThemeProvider } from '@/components';
 const noto = Noto_Sans({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Turkey Weather Map',
-  description: 'Turkey Weather Map',
+  title: 'MeteoMap Türkiye',
+  description: 'Türkiye için hava durumu tahminlerine erişin.',
 };
 
 export default function RootLayout({ children }) {

@@ -3,7 +3,7 @@ import HeaderRightSide from './HeaderRightSide';
 
 const Header = () => {
   const brand = {
-    name: 'Turkey Weather Map',
+    name: 'MeteoMap Türkiye',
     logo: '/logo.png',
   };
   return (
