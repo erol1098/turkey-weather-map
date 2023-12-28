@@ -34,7 +34,7 @@ const CardFooter = ({ forecast = {} }) => {
       value: `${Math.round(+windSpeed)} m/s`,
     },
   ];
-  console.log('first', stack);
+
   return (
     <div className='w-full grid grid-cols-2 grid-flow-row gap-2 '>
       {stack.map((item, index) => (

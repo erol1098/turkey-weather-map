@@ -15,17 +15,21 @@ const Map = () => {
 
   const handleHoverCityName = (e) => {
     const target = e.target.previousSibling;
-    target.classList.add('fill-slate-500');
+    target.classList.remove('fill-slate-50');
+    target.classList.remove('dark:fill-slate-400');
+    target.classList.add('fill-red-500');
   };
 
   const handleLeaveCityName = (e) => {
     const target = e.target.previousSibling;
-    target.classList.remove('fill-slate-500');
+    target.classList.remove('fill-red-500');
+    target.classList.add('fill-slate-50');
+    target.classList.add('dark:fill-slate-400');
   };
 
   return (
     <section className='w-full overflow-x-auto px-8'>
-      <div className='min-w-[900px] max-w-[1400px] mx-auto bg-slate-400 dark:bg-slate-600 '>
+      <div className='min-w-[900px] max-w-[1400px] mx-auto bg-sky-400 dark:bg-slate-600 '>
         <svg
           id='svg-turkey-map'
           xmlns='http://www.w3.org/2000/svg'
@@ -40,7 +44,7 @@ const Map = () => {
                 data-city-name={city.dataCityName}
                 title={city.title}
                 onClick={handleSelectCity}
-                className='fill-slate-300 dark:fill-slate-400 stroke-white transition-all duration-300 ease-out hover:fill-slate-500 cursor-pointer'
+                className='fill-slate-50 dark:fill-slate-400 transition-all duration-300 ease-out hover:fill-red-500 cursor-pointer stroke-red-500 dark:stroke-slate-500'
                 d={city.d}
               />
               <text

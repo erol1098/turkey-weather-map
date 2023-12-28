@@ -13,7 +13,6 @@ const ThemeSwitchButton = () => {
       className='w-16 h-10 p-2 bg-gray-200 rounded-full dark:bg-slate-600 '
       onClick={() => {
         setTheme(theme === 'dark' ? 'light' : 'dark');
-        console.log('first theme', theme);
       }}
     >
       {theme === 'dark' ? (
