@@ -25,6 +25,7 @@ const useGetWeatherData = () => {
         `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.NEXT_PUBLIC_API_KEY}`
       );
       const data = await response.json();
+      data.cityName = res[0].name;
       return data;
     } catch (error) {
       console.log(error);

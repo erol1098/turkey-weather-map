@@ -2,7 +2,8 @@
 import { XCircleIcon } from '@heroicons/react/16/solid';
 
 const CardHeader = ({ forecast = {}, closeSidebar = () => {} }) => {
-  const city = forecast.name || '';
+  const city = forecast.cityName.split(' ')[0] || '';
+
   return (
     <>
       <div className='w-full flex items-center justify-end'>
