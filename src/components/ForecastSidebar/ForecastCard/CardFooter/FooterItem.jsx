@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 const FooterItem = ({ item = {} }) => {
   return (
-    <div className='flex items-center justify-center gap-3 shadow-md p-2 rounded-md hover:opacity-80 cursor-pointer  bg-red-500 dark:bg-gray-500'>
+    <div className='flex items-center justify-center gap-3 shadow-md p-2 rounded-md hover:opacity-95 bg-red-600 dark:bg-gray-500'>
       <div className='flex items-center justify-start gap-2'>
         <Image src={item.icon} alt={item.label} width={50} height={50} />
       </div>

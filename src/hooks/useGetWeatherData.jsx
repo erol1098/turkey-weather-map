@@ -6,7 +6,7 @@ const useGetWeatherData = () => {
   const getCityCoordinates = async (city) => {
     try {
       const response = await fetch(
-        `http://api.openweathermap.org/geo/1.0/direct?q=${city},tr&limit=5&appid=${process.env.NEXT_PUBLIC_API_KEY}`
+        `https://api.openweathermap.org/geo/1.0/direct?q=${city},tr&limit=5&appid=${process.env.NEXT_PUBLIC_API_KEY}`
       );
       const data = await response.json();
       return data;

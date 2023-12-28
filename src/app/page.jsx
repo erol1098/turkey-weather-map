@@ -10,7 +10,7 @@ const HomePage = async ({ searchParams }) => {
       <Suspense>
         <Map />
       </Suspense>
-      <Suspense fallback={<p>Loading weather...</p>}>
+      <Suspense>
         <ForecastSidebar city={city} />
       </Suspense>
     </main>

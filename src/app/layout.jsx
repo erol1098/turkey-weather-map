@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Header />
-          <main className=' bg-sky-400 dark:bg-slate-600'>{children}</main>
+          <main>{children}</main>
         </ThemeProvider>
       </body>
     </html>
