@@ -1,4 +1,4 @@
-import { ThemeSwitchButton } from '@/components/UI';
+import ThemeSwitchButton from './ThemeSwitchButton';
 
 const HeaderRightSide = () => {
   return (
