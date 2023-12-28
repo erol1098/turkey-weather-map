@@ -16,7 +16,7 @@ export const getWeatherData = async (city) => {
     const { lat, lon } = res[0];
 
     const response = await fetch(
-      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${process.env.NEXT_PUBLIC_API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${process.env.NEXT_PUBLIC_API_KEY}`
     );
     const data = await response.json();
     return data;

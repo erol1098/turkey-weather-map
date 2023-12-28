@@ -1,9 +1,9 @@
-import { Inter } from 'next/font/google';
+import { Noto_Sans } from 'next/font/google';
 
 import './globals.css';
 import { Header, ThemeProvider } from '@/components';
 
-const inter = Inter({ subsets: ['latin'] });
+const noto = Noto_Sans({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'Turkey Weather Map',
@@ -13,7 +13,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang='tr'>
-      <body className={inter.className}>
+      <body className={noto.className}>
         <ThemeProvider
           attribute='class'
           defaultTheme='system'
