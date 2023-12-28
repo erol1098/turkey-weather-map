@@ -1,15 +1,18 @@
 'use client';
-import useGetWeatherData from '@/hooks/useGetWeatherData';
+import { useRouter } from 'next/navigation';
+
 import { CITIES } from './cities';
 
 const Map = () => {
-  const { getWeatherData } = useGetWeatherData();
+  const router = useRouter();
 
-  const handleSelectCity = async (e) => {
+  const handleSelectCity = (e) => {
     const city = e.target.dataset.cityName || e.target.textContent;
-    const data = await getWeatherData(city);
-    console.log(data);
+    router.push(`/?city=${city.toLocaleLowerCase()}`, undefined, {
+      shallow: true,
+    });
   };
+
   const handleHoverCityName = (e) => {
     const target = e.target.previousSibling;
     target.classList.add('fill-slate-500');
