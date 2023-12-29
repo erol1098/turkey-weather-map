@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- Please update value in the {}  -->
 
-## Getting Started
+# MeteoApp Türkiye
 
-First, run the development server:
+### Click and see live demo [Live Demo](https://meteo-map-turkiye.vercel.app/)
 
+## Tech Stack
+- React
+- Next.js
+- Tailwind CSS
+
+## Features
+- This app show the weather of the city selected from the Turkey map.
+- By clicking a city on the map, information about the current weather of that city displayed on sidebar.
+
+## Screenshots
+
+![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/080d134d-7b52-4705-933a-b2232c41f49c)
+
+##
+![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/cd8e423b-ca73-4a53-8ed4-90f59159c31e)
+
+##
+![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/f4c7154a-69fe-4019-ac50-53d34407f35b)
+
+##
+![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/3b5d3caa-d9e2-40b3-bcc5-62661e5f3a59)
+
+## Setup
+To clone and run this application, you'll need [Git](https://git-scm.com)
+
+### Clone this repository
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/erol1098/turkey-weather-map.git
 ```
+### Install dependencies
+```bash
+yarn
+```
+### Run the app on development server
+```bash
+yarn dev
+```
+### Don't forget to add your API key in .env
+### Build app for production
+```bash
+yarn build
+```
+## Contact
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- GitHub [erol1098](https://github.com/erol1098)
+- Linkedin [Erol Mahmutoglu](https://www.linkedin.com/in/erol-mahmutoglu/)
