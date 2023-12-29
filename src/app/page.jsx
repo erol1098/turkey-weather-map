@@ -1,6 +1,6 @@
 import { Suspense } from 'react';
 
-import { ForecastSidebar, Map } from '@/components';
+import { Home, ForecastSidebar } from '@/components';
 
 const HomePage = async ({ searchParams }) => {
   const city = searchParams.city;
@@ -8,7 +8,7 @@ const HomePage = async ({ searchParams }) => {
   return (
     <main className='relative sm-container w-full min-h-lvh py-6  bg-sky-400 dark:bg-slate-600'>
       <Suspense>
-        <Map />
+        <Home />
       </Suspense>
       <Suspense>
         <ForecastSidebar city={city} />

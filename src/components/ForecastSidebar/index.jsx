@@ -3,8 +3,8 @@ import { useEffect, useState } from 'react';
 
 import { useRouter } from 'next/navigation';
 
-import ForecastCard from './ForecastCard';
 import useGetWeatherData from '@/hooks/useGetWeatherData';
+import ForecastCard from './ForecastCard';
 
 const ForecastSidebar = ({ city = '' }) => {
   const [openSidebar, setOpenSidebar] = useState(city ? 'flex' : 'hidden');
