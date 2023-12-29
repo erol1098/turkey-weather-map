@@ -29,7 +29,15 @@ const Map = () => {
 
   return (
     <section className='w-full overflow-x-auto px-8'>
-      <div className='min-w-[900px] max-w-[1400px] mx-auto bg-sky-400 dark:bg-slate-600 '>
+      <div className='min-w-[900px] max-w-[1200px] mx-auto bg-sky-400 dark:bg-slate-600 flex flex-col items-center justify-start gap-6'>
+        <div className='flex flex-col self-start md:self-center items-center justify-start gap-2'>
+          <h2 className='text-3xl font-semibold text-gray-900 dark:text-gray-100'>
+            Forecast Map of Türkiye
+          </h2>
+          <p className='text-gray-800 dark:text-gray-300'>
+            Select a city to see the weather forecast.
+          </p>
+        </div>
         <svg
           id='svg-turkey-map'
           xmlns='http://www.w3.org/2000/svg'

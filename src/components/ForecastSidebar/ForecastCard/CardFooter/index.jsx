@@ -1,5 +1,12 @@
 import FooterItem from './FooterItem';
 
+import {
+  WiSunset,
+  WiSunrise,
+  WiThermometer,
+  WiStrongWind,
+} from 'weather-icons-react';
+
 const CardFooter = ({ forecast = {} }) => {
   const sunRise = forecast.sys.sunrise || 0;
   const sunSet = forecast.sys.sunset || 0;
@@ -9,7 +16,7 @@ const CardFooter = ({ forecast = {} }) => {
   const stack = [
     {
       label: 'Sun Rise',
-      icon: '/icons/sunrise.svg',
+      icon: <WiSunrise size={48} color='#fde047' />,
       value: new Date(sunRise * 1000).toLocaleTimeString('tr-TR', {
         hour: '2-digit',
         minute: '2-digit',
@@ -17,7 +24,7 @@ const CardFooter = ({ forecast = {} }) => {
     },
     {
       label: 'Sun Set',
-      icon: '/icons/sunset.svg',
+      icon: <WiSunset size={48} color='#ea580c' />,
       value: new Date(sunSet * 1000).toLocaleTimeString('tr-TR', {
         hour: '2-digit',
         minute: '2-digit',
@@ -25,12 +32,12 @@ const CardFooter = ({ forecast = {} }) => {
     },
     {
       label: 'Feels Like',
-      icon: '/icons/temperature-feels-like.svg',
+      icon: <WiThermometer size={48} color='#f97316' />,
       value: `${Math.round(+feelsLike)}°`,
     },
     {
       label: 'Wind',
-      icon: '/icons/wind.svg',
+      icon: <WiStrongWind size={48} color='#38bdf8' />,
       value: `${Math.round(+windSpeed)} m/s`,
     },
   ];
