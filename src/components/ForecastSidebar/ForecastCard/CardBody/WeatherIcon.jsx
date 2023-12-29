@@ -11,7 +11,7 @@ const WeatherIcon = ({ icon = '01d', alt = 'icon' }) => {
         width={140}
         height={140}
         placeholder='blur'
-        blurDataURL='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN87+LyHwAGGQJ4TqcChgAAAABJRU5ErkJggg=='
+        blurDataURL='/icons/loader.svg'
       />
     </div>
   );
