@@ -34,7 +34,7 @@ const ForecastSidebar = ({ city = '' }) => {
 
   return (
     <section
-      className={`absolute top-0 right-0 w-[375px] h-full bg-teal-100 dark:bg-slate-900 shadow-xl ${openSidebar} transition-all duration-500 ease-in-out px-2 py-4 select-none`}
+      className={`absolute top-0 right-0 w-[375px] h-lvh bg-teal-100 dark:bg-slate-900 shadow-xl ${openSidebar} transition-all duration-500 ease-in-out px-2 py-4 select-none z-20`}
     >
       {city && (
         <ForecastCard
