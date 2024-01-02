@@ -2,6 +2,7 @@ import { useState } from 'react';
 
 const useGetWeatherData = () => {
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const getCityCoordinates = async (city) => {
     try {
@@ -11,6 +12,7 @@ const useGetWeatherData = () => {
       const data = await response.json();
       return data;
     } catch (error) {
+      setError(error);
       throw new Error(error);
     }
   };
@@ -28,13 +30,14 @@ const useGetWeatherData = () => {
       data.cityName = res[0].name;
       return data;
     } catch (error) {
+      setError(error);
       throw new Error(error);
     } finally {
       setLoading(false);
     }
   };
 
-  return { loading, getWeatherData };
+  return { loading, error, getWeatherData };
 };
 
 export default useGetWeatherData;

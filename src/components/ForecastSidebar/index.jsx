@@ -10,7 +10,7 @@ const ForecastSidebar = ({ city = '' }) => {
   const [openSidebar, setOpenSidebar] = useState(city ? 'flex' : 'hidden');
   const [forecast, setForecast] = useState('');
 
-  const { getWeatherData, loading } = useGetWeatherData();
+  const { getWeatherData, loading, error } = useGetWeatherData();
 
   const router = useRouter();
 
@@ -34,12 +34,13 @@ const ForecastSidebar = ({ city = '' }) => {
 
   return (
     <section
-      className={`absolute top-0 right-0 w-[375px] h-full bg-teal-100 dark:bg-slate-900 shadow-xl ${openSidebar} transition-all duration-500 ease-in-out px-2 py-4 select-none`}
+      className={`absolute top-0 right-0 w-[375px] h-lvh min-h-[600px] bg-teal-100 dark:bg-slate-900 shadow-xl ${openSidebar} transition-all duration-500 ease-in-out px-2 py-4 rounded-lg select-none z-20`}
     >
       {city && (
         <ForecastCard
           forecast={forecast}
           loading={loading}
+          error={error}
           closeSidebar={closeSidebar}
         />
       )}
