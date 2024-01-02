@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 import { useSpring } from '@react-spring/web';
 import { createUseGesture, dragAction, pinchAction } from '@use-gesture/react';
@@ -7,6 +7,9 @@ import { createUseGesture, dragAction, pinchAction } from '@use-gesture/react';
 const useGesture = createUseGesture([dragAction, pinchAction]);
 
 const useMapGestures = () => {
+  const [mapInteraction, setMapInteraction] = useState(0);
+
+  console.log('mapInteraction', mapInteraction);
   useEffect(() => {
     const handler = (e) => e.preventDefault();
     document.addEventListener('gesturestart', handler);
@@ -51,6 +54,8 @@ const useMapGestures = () => {
         const y = memo[1] - (ms - 1) * memo[3];
         // api.start({ scale: s, rotateZ: a, x, y });
         api.start({ scale: s, rotateZ: 0, x, y });
+
+        setMapInteraction((prev) => prev + 1);
         return memo;
       },
     },
@@ -64,21 +69,24 @@ const useMapGestures = () => {
   const zoomIn = () => {
     const scale = style.scale.get() + 0.5;
 
+    setMapInteraction((prev) => prev + 1);
     api.start({ scale });
   };
 
   const zoomOut = () => {
     const scale = style.scale.get() - 0.5;
-    if (scale < 0.9) return;
 
+    if (scale < 0.9) return;
+    setMapInteraction((prev) => prev + 1);
     api.start({ scale });
   };
 
   const resetMap = () => {
+    setMapInteraction((prev) => prev + 1);
     api.start({ x: 0, y: 0, scale: 1, rotateZ: 0 });
   };
 
-  return { ref, style, zoomIn, zoomOut, resetMap };
+  return { ref, style, zoomIn, zoomOut, resetMap, mapInteraction };
 };
 
 export default useMapGestures;

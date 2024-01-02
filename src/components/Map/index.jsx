@@ -21,7 +21,7 @@ const Map = () => {
       xmlnsXlink='http://www.w3.org/1999/xlink'
       version='1.1'
       viewBox='0 0 800 350'
-      className='max-w-[1200px] min-h-[250px] w-full h-fit '
+      className='max-w-[1200px] min-h-[250px] w-full h-fit'
     >
       {CITIES.map((city) => (
         <g key={city.id}>
