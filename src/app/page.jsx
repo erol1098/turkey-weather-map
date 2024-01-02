@@ -6,14 +6,14 @@ const HomePage = async ({ searchParams }) => {
   const city = searchParams.city;
 
   return (
-    <>
+    <main>
       <Suspense>
         <Home />
       </Suspense>
       <Suspense>
         <ForecastSidebar city={city} />
       </Suspense>
-    </>
+    </main>
   );
 };
 

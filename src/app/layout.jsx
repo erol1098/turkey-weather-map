@@ -1,7 +1,7 @@
 import { Noto_Sans } from 'next/font/google';
 
 import './globals.css';
-import { Header, ThemeProvider } from '@/components';
+import { Footer, Header, ThemeProvider } from '@/components';
 
 const noto = Noto_Sans({ subsets: ['latin'] });
 
@@ -21,8 +21,9 @@ export default function RootLayout({ children }) {
           disableTransitionOnChange
         >
           <Header />
-          <main>{children}</main>
+          {children}
         </ThemeProvider>
+        <Footer />
       </body>
     </html>
   );
