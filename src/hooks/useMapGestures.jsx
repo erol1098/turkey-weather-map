@@ -61,7 +61,24 @@ const useMapGestures = () => {
     }
   );
 
-  return { style, api, ref };
+  const zoomIn = () => {
+    const scale = style.scale.get() + 0.5;
+
+    api.start({ scale });
+  };
+
+  const zoomOut = () => {
+    const scale = style.scale.get() - 0.5;
+    if (scale < 0.9) return;
+
+    api.start({ scale });
+  };
+
+  const resetMap = () => {
+    api.start({ x: 0, y: 0, scale: 1, rotateZ: 0 });
+  };
+
+  return { ref, style, zoomIn, zoomOut, resetMap };
 };
 
 export default useMapGestures;
