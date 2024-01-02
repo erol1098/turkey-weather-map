@@ -13,18 +13,19 @@ const Footer = () => {
           >
             MeteoMap Türkiye
           </a>
-
-          <span className='text-slate-600 dark:text-slate-400 font-semibold text-md'>
-            by
-          </span>
-          <a
-            className='text-slate-600 dark:text-slate-400 font-bold text-md ps-1'
-            href='https://www.linkedin.com/in/erol-mahmutoglu/'
-            target='_blank'
-          >
-            Erol Mahmutoğlu
-          </a>
         </span>
+      </div>
+      <div className='flex items-center justify-center gap-1'>
+        <span className='text-slate-600 dark:text-slate-400 font-semibold text-md'>
+          by
+        </span>
+        <a
+          className='text-slate-600 dark:text-slate-400 font-bold text-md ps-1'
+          href='https://www.linkedin.com/in/erol-mahmutoglu/'
+          target='_blank'
+        >
+          Erol Mahmutoğlu
+        </a>
       </div>
     </footer>
   );
