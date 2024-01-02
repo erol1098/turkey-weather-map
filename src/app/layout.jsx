@@ -7,7 +7,8 @@ const noto = Noto_Sans({ subsets: ['latin'] });
 
 export const metadata = {
   title: 'MeteoMap Türkiye',
-  description: 'Türkiye için hava durumu tahminlerine erişin.',
+  description:
+    "Türkiye'nin hava durumu haritası. İstediğiniz şehri seçin ve günlük hava durumunu görün.",
 };
 
 export default function RootLayout({ children }) {
