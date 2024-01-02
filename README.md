@@ -15,16 +15,17 @@
 
 ## Screenshots
 
-![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/080d134d-7b52-4705-933a-b2232c41f49c)
+![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/448ed128-4b4a-4841-9e02-c79ce0f14a70)
 
 ##
-![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/cd8e423b-ca73-4a53-8ed4-90f59159c31e)
+![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/04e13975-2d7b-4a53-9ed7-cd9382048922)
 
 ##
-![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/f4c7154a-69fe-4019-ac50-53d34407f35b)
+![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/ed1ce6fa-b7d6-41bd-bdbe-a4f94019d37f)
 
 ##
-![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/3b5d3caa-d9e2-40b3-bcc5-62661e5f3a59)
+![image](https://github.com/erol1098/turkey-weather-map/assets/99766307/ca6ba561-dd79-428c-a862-546bf3cfd420)
+
 
 ## Setup
 To clone and run this application, you'll need [Git](https://git-scm.com)
@@ -37,16 +38,18 @@ git clone https://github.com/erol1098/turkey-weather-map.git
 ```bash
 yarn
 ```
+### Add your OpenWeatherMap Current Weather Data API key in .env file
+```bash
+NEXT_PUBLIC_API_KEY=<YOUR API KEY>
+```
 ### Run the app on development server
 ```bash
 yarn dev
 ```
-### Don't forget to add your API key in .env
 ### Build app for production
 ```bash
 yarn build
 ```
 ## Contact
-
 - GitHub [erol1098](https://github.com/erol1098)
 - Linkedin [Erol Mahmutoglu](https://www.linkedin.com/in/erol-mahmutoglu/)
