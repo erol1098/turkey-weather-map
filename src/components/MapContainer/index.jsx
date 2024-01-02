@@ -2,6 +2,7 @@
 
 import useMapGestures from '@/hooks/useMapGestures';
 import { animated } from '@react-spring/web';
+
 import MapControls from './MapControls';
 
 const MapContainer = ({ children }) => {

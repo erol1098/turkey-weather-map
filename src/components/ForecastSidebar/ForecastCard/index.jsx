@@ -6,22 +6,23 @@ import CardLoader from './CardLoader';
 import CloseCard from './CloseCard';
 
 const ForecastCard = (props) => {
-  const { forecast, loading } = props;
+  const { forecast, loading, error } = props;
 
-  if (loading) {
+  if (loading || (!forecast && !error)) {
     return <CardLoader />;
   }
   return (
     <section className='w-[350px] mx-auto flex flex-col items-center justify-start gap-4 '>
       <CloseCard {...props} />
-      {forecast ? (
+      {forecast && (
         <>
           <CardHeader {...props} />
           <CardBody {...props} />
           <hr className='w-full border-1 border-slate-800 dark:border-slate-900' />
           <CardFooter {...props} />
         </>
-      ) : (
+      )}
+      {error && (
         <CardError
           title='No data found for this city'
           description=' Please select a city from the map.'
